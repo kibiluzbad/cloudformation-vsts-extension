@@ -1,0 +1,56 @@
+{
+    "manifestVersion": 1,
+    "id": "vsts-cloudformation-build-tasks",
+    "name": "Cloudformation extensions",
+    "version": "0.0.1",
+    "publisher": "kibiluzbad",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],    
+    "description": "Tools for validating and deploy cloudformation scripts.",
+    "categories": [
+        "Build and release"
+    ],
+    "icons": {
+        "default": "images/icon.png"        
+    },
+    "files": [
+        {
+            "path": "tasks"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "cloudformation-validation-build-task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "tasks/cloudformation-validation"
+            }
+        },
+        {
+            "id": "cloudformation-changeset-build-task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "tasks/cloudformation-changeset"
+            }
+        },
+        {
+            "id": "cloudformation-deploy-build-task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "tasks/cloudformation-deploy"
+            }
+        }
+    ]
+}

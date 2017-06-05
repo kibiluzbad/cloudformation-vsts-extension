@@ -1,0 +1,40 @@
+{
+  "id": "1f6c7115-85d4-4ba2-838e-5100e2c3a3a4",
+  "name": "CloudformationDeploy",
+  "friendlyName": "Cloudformation deploy",
+  "description": "Deploy cloudformation script using AWS CLI.",
+  "author": "Leonardo Cardoso",
+  "helpMarkDown": "Replace with markdown to show in help",
+  "category": "Utility",
+  "visibility": [
+    "Build",
+    "Release"
+  ],
+  "demands": [
+    "sh",
+    "aws",
+    "pip",
+    "python"
+  ],
+  "version": {
+    "Major": "0",
+    "Minor": "1",
+    "Patch": "$PATCH"
+  },
+  "minimumAgentVersion": "1.95.0",
+  "instanceNameFormat": "Cloudformation deploy $(stackname)",
+  "inputs": [{
+      "name": "stackname",
+      "type": "string",
+      "label": "Stackname",
+      "defaultValue": "",
+      "required": true
+    }
+  ],
+  "execution": {
+    "Node": {
+      "target": "cf-deploy.js",
+      "argumentFormat": ""
+    }
+  }
+}

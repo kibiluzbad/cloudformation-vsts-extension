@@ -1,0 +1,56 @@
+{
+  "id": "64d070c2-d63a-48d5-bb2c-9f8aa418acb6",
+  "name": "CloudformationChangeSet",
+  "friendlyName": "Cloudformation change set",
+  "description": "Creates cloudformation change set using AWS API.",
+  "author": "Leonardo Cardoso",
+  "helpMarkDown": "Replace with markdown to show in help",
+  "category": "Utility",
+  "visibility": [
+    "Build",
+    "Release"
+  ],
+  "demands": [
+    "sh",
+    "aws",
+    "pip",
+    "python"
+  ],
+  "version": {
+    "Major": "0",
+    "Minor": "1",
+    "Patch": "$PATCH"
+  },
+  "minimumAgentVersion": "1.95.0",
+  "instanceNameFormat": "Cloudformation change set $(stackname)",
+  "inputs": [{
+      "name": "stackname",
+      "type": "string",
+      "label": "Stackname",
+      "defaultValue": "",
+      "required": true
+    },
+    {
+      "name": "template",
+      "type": "filePath",
+      "label": "Cloudformation template",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "Cloudformation template to deploy."
+    },
+    {
+      "name": "parameters",
+      "type": "multiLine",
+      "label": "Cloudformation parameters list, name=value",
+      "defaultValue": "",
+      "required": false,
+      "helpMarkDown": "List should be inputed in the follow format: param1_name=param1_value\nparam2_name=param2_value"
+    }
+  ],
+  "execution": {
+    "Node": {
+      "target": "cf-changeset.js",
+      "argumentFormat": ""
+    }
+  }
+}

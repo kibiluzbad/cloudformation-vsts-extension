@@ -1,0 +1,42 @@
+{
+  "id": "c85ce660-3b0b-11e7-9380-93cf932d1cd1",
+  "name": "CloudformationValidation",
+  "friendlyName": "Cloudformation validation",
+  "description": "Validates cloudformation script using AWS CLI.",
+  "author": "Leonardo Cardoso",
+  "helpMarkDown": "Replace with markdown to show in help",
+  "category": "Utility",
+  "visibility": [
+    "Build",
+    "Release"
+  ],
+  "demands": [
+    "aws",
+    "python",
+    "pip",
+    "sh"
+  ],
+  "version": {
+    "Major": "0",
+    "Minor": "1",
+    "Patch": "$PATCH"
+  },
+  "minimumAgentVersion": "1.95.0",
+  "instanceNameFormat": "Cloudformation validation $(template)",
+  "inputs": [
+    {
+      "name": "template",
+      "type": "filePath",
+      "label": "Cloudformation template",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "Cloudformation template to validate."
+    }
+  ],
+  "execution": {
+    "Node": {
+      "target": "cf-validation.js",
+      "argumentFormat": ""
+    }
+  }
+}

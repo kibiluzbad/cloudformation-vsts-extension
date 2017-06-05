@@ -1,0 +1,7 @@
+pylint
+autopep8
+boto3
+jinja2
+coloredlogs
+unidecode
+jinja2
