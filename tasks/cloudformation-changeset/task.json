@@ -4,8 +4,8 @@
   "friendlyName": "Cloudformation change set",
   "description": "Creates cloudformation change set using AWS API.",
   "author": "Leonardo Cardoso",
-  "helpMarkDown": "Replace with markdown to show in help",
-  "category": "Utility",
+  "helpMarkDown": "[More information](https://github.com/kibiluzbad/cloudformation-vsts-extension)",
+  "category": "Build",
   "visibility": [
     "Build",
     "Release"

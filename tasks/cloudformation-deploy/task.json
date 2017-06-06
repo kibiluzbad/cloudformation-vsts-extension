@@ -4,7 +4,7 @@
   "friendlyName": "Cloudformation deploy",
   "description": "Deploy cloudformation script using AWS CLI.",
   "author": "Leonardo Cardoso",
-  "helpMarkDown": "Replace with markdown to show in help",
+  "helpMarkDown": "[More information](https://github.com/kibiluzbad/cloudformation-vsts-extension)",
   "category": "Utility",
   "visibility": [
     "Build",
