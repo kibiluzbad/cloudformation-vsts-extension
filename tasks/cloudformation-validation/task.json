@@ -5,7 +5,7 @@
   "description": "Validates cloudformation script using AWS CLI.",
   "author": "Leonardo Cardoso",
   "helpMarkDown": "[More information](https://github.com/kibiluzbad/cloudformation-vsts-extension)",
-  "category": "Utility",
+  "category": "Build",
   "visibility": [
     "Build",
     "Release"
